@@ -46,40 +46,48 @@ const AppShowcase = () => {
   return (
     <div id="work" ref={sectionRef} className="app-showcase">
       <div className="w-full">
+        <h1 className="text-4xl text-white font-bold text-center mb-12">My Projects</h1>
         <div className="showcaselayout">
           <div ref={rydeRef} className="first-project-wrapper">
-            <div className="image-wrapper">
-              <img src="/images/project1.png" alt="Ryde App Interface" />
-            </div>
-            <div className="text-content">
-              <h2>
-                On-Demand Rides Made Simple with a Powerful, User-Friendly App
-                called Ryde
-              </h2>
-              <p className="text-white-50 md:text-xl">
-                An app built with React Native, Expo, & TailwindCSS for a fast,
-                user-friendly experience.
-              </p>
-            </div>
+            <a href="https://www.figma.com/design/f3mczrO7L5BTj5rsgsmLuT/Hotelix?node-id=0-1&t=vJkneAbNhH0NxiE8-1" target="_blank" rel="noopener noreferrer">
+              <div className="image-wrapper ">
+                <img src={`${import.meta.env.BASE_URL}images/project1.png`} alt="Ryde App Interface" />
+              </div>
+              <div className="text-content">
+                <h2>
+                  Hotelix — Hotel Booking App
+                </h2>
+                <p className="text-white-50 md:text-xl">
+                  A UX case study on simplifying hotel discovery and booking — from research and wireframes to a tested, high-fidelity prototype.
+                </p>
+              </div>
+            </a>
           </div>
 
           <div className="project-list-wrapper overflow-hidden">
-            <div className="project" ref={libraryRef}>
-              <div className="image-wrapper bg-[#FFEFDB]">
-                <img
-                  src="/images/project2.png"
-                  alt="Library Management Platform"
-                />
-              </div>
-              <h2>The Library Management Platform</h2>
-            </div>
+             <a href="https://github.com/PeanLutHuynh/Project_Blockify" target="_blank" rel="noopener noreferrer">
+                <div className="project" ref={libraryRef}>
+                  <div className="image-wrapper bg-[#050F1D] border border-[#3D83F5]" >
+                    <img
+                      src={`${import.meta.env.BASE_URL}images/project2.png`}
+                      alt="Library Management Platform"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h2>Real-Time Chat App</h2>  
+                </div>
+              </a>
 
-            <div className="project" ref={ycDirectoryRef}>
-              <div className="image-wrapper bg-[#FFE7EB]">
-                <img src="/images/project3.png" alt="YC Directory App" />
-              </div>
-              <h2>YC Directory - A Startup Showcase App</h2>
-            </div>
+              <a href="https://github.com/Giang-Duc-Huy/Chatchat" target="_blank" rel="noopener noreferrer">
+                <div className="project" ref={ycDirectoryRef}>
+                  <div className="image-wrapper bg-[#010102] border border-[#3D83F5]">
+                    <img src={`${import.meta.env.BASE_URL}images/project3.png`} 
+                    className="w-full h-full object-cover" 
+                    alt="YC Directory App" />
+                  </div>
+                  <h2>Blockify — E-Commerce Platform</h2>
+                </div>
+              </a>
           </div>
         </div>
       </div>

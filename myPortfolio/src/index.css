@@ -139,22 +139,10 @@ section {
         }
       }
     }
-
-    .contact-btn {
-      @apply flex;
-
-      .inner {
-        @apply px-5 py-2 rounded-lg bg-[#3D83F5] text-white group-hover:bg-black-50 transition-colors duration-300;
-
-        span {
-          @apply group-hover:text-white transition-colors duration-300;
-        }
-      }
-    }
   }
 
   .app-showcase {
-    @apply w-full mt-20 px-5 md:px-20 py-10 md:py-20 flex items-center justify-center;
+    @apply w-full  px-5 md:px-20 py-10 md:py-20 flex items-center justify-center;
 
     .showcaselayout {
       @apply flex xl:flex-row flex-col gap-10 justify-between;
@@ -164,7 +152,7 @@ section {
       @apply h-full flex flex-col justify-between xl:w-[60%];
 
       .image-wrapper {
-        @apply xl:h-[70vh] md:h-[50vh] h-96 relative;
+        @apply xl:h-[60vh] md:h-[40vh] h-70 relative;
 
         img {
           @apply w-full h-full object-cover rounded-xl absolute inset-0;
@@ -468,4 +456,98 @@ section {
 
 .card:hover::before {
   opacity: 1;
+}
+
+/*-----------------------------------*/
+
+/* === NavBar updates: removed contact-btn, nav moved right, added mobile menu === */
+
+/* Override: desktop nav now sits on the right */
+.navbar nav.desktop ul {
+  /* already handled by justify-between on .inner */
+}
+
+/* Hamburger button */
+.navbar .hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 110;
+}
+
+@media (min-width: 1024px) {
+  .navbar .hamburger {
+    display: none;
+  }
+}
+
+.navbar .hamburger .bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: white;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
+}
+
+/* Animate to X when open */
+.navbar .hamburger .bar.open:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.navbar .hamburger .bar.open:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.navbar .hamburger .bar.open:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile dropdown menu */
+.navbar .mobile-menu {
+  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.3s ease;
+  background-color: black;
+  padding: 0 20px;
+}
+
+@media (max-width: 1023px) {
+  .navbar .mobile-menu {
+    display: block;
+  }
+}
+
+.navbar .mobile-menu.open {
+  max-height: 400px;
+  padding: 16px 20px 24px;
+}
+
+.navbar .mobile-menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.navbar .mobile-menu li a {
+  display: block;
+  padding: 12px 0;
+  font-size: 1rem;
+  color: #d9ecff; /* white-50 */
+  border-bottom: 1px solid #1c1c21; /* black-50 */
+  transition: color 0.2s ease;
+}
+
+.navbar .mobile-menu li:last-child a {
+  border-bottom: none;
+}
+
+.navbar .mobile-menu li a:hover {
+  color: white;
 }

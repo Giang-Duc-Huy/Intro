@@ -1,38 +1,34 @@
 import { useState, useEffect } from "react";
-
 import { navLinks } from "../constants";
 
 const NavBar = () => {
-  // track if the user has scrolled down the page
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    // create an event listener for when the user scrolls
     const handleScroll = () => {
-      // check if the user has scrolled down at least 10px
-      // if so, set the state to true
-      const isScrolled = window.scrollY > 10;
-      setScrolled(isScrolled);
+      setScrolled(window.scrollY > 10);
     };
-
-    // add the event listener to the window
     window.addEventListener("scroll", handleScroll);
-
-    // cleanup the event listener when the component is unmounted
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Close menu on link click
+  const handleLinkClick = () => setMenuOpen(false);
 
   return (
     <header className={`navbar ${scrolled ? "scrolled" : "not-scrolled"}`}>
       <div className="inner">
+        {/* Logo */}
         <a href="#hero" className="logo">
-          <img src="/images/logos/Logo.png" alt="logo" />
+          <img src={`${import.meta.env.BASE_URL}images/logos/Logo.png`} alt="logo" />
         </a>
 
+        {/* Desktop nav - moved to the right */}
         <nav className="desktop">
           <ul>
             {navLinks.map(({ link, name }) => (
-              <li key={name} className="group">
+              <li key={name} className="group text-2xl">
                 <a href={link}>
                   <span>{name}</span>
                   <span className="underline" />
@@ -42,14 +38,33 @@ const NavBar = () => {
           </ul>
         </nav>
 
-        <a href="#contact" className="contact-btn group">
-          <div className="inner">
-            <span>Contact me</span>
-          </div>
-        </a>
+        {/* Hamburger button - mobile only */}
+        <button
+          className="hamburger"
+          onClick={() => setMenuOpen((prev) => !prev)}
+          aria-label="Toggle menu"
+          aria-expanded={menuOpen}
+        >
+          <span className={`bar ${menuOpen ? "open" : ""}`} />
+          <span className={`bar ${menuOpen ? "open" : ""}`} />
+          <span className={`bar ${menuOpen ? "open" : ""}`} />
+        </button>
       </div>
+
+      {/* Mobile dropdown menu */}
+      <nav className={`mobile-menu ${menuOpen ? "open" : ""}`}>
+        <ul>
+          {navLinks.map(({ link, name }) => (
+            <li key={name}>
+              <a href={link} onClick={handleLinkClick}>
+                {name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </header>
   );
-}
+};
 
 export default NavBar;

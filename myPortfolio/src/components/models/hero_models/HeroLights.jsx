@@ -2,40 +2,50 @@ import * as THREE from "three";
 
 const HeroLights = () => (
   <>
-    {/* lamp's light */}
+    {/* ambient tổng thể — tăng mạnh để sáng base */}
+    <ambientLight intensity={1.2} color="#c8b8ff" />
+
+    {/* đèn chính từ trên — trắng mạnh */}
     <spotLight
-      position={[2, 5, 6]}
-      angle={0.15}
-      penumbra={0.2}
-      intensity={100}
-      color="white"
+      position={[2, 8, 6]}
+      angle={0.25}
+      penumbra={0.3}
+      intensity={200}
+      color="#ffffff"
+      castShadow
     />
-    {/* bluish overhead lamp */}
+
+    {/* fill xanh cyan từ bên trái */}
     <spotLight
-      position={[4, 5, 4]}
-      angle={0.3}
-      penumbra={0.5}
-      intensity={40}
-      color="#4cc9f0"
-    />
-    {/* purplish side fill */}
-    <spotLight
-      position={[-3, 5, 5]}
+      position={[-5, 6, 5]}
       angle={0.4}
-      penumbra={1}
-      intensity={60}
-      color="#9d4edd"
+      penumbra={0.6}
+      intensity={20}
+      color="#00d4ff"
     />
-    {/* area light for soft moody fill */}
+
+    {/* fill tím từ phải */}
+    <spotLight
+      position={[5, 5, 3]}
+      angle={0.35}
+      penumbra={0.7}
+      intensity={50}
+      color="#bf00ff"
+    />
+
+    {/* đèn từ dưới lên — cyberpunk rim */}
+    <pointLight position={[0, -1, 3]} intensity={10} color="#00ffff" />
+
+    {/* RectAreaLight cho soft fill */}
     <primitive
-      object={new THREE.RectAreaLight("#a259ff", 8, 3, 2)}
-      position={[1, 3, 4]}
-      rotation={[-Math.PI / 4, Math.PI / 4, 0]}
-      intensity={15}
+      object={new THREE.RectAreaLight("#a259ff", 15, 4, 3)}
+      position={[0, 4, 5]}
+      rotation={[-Math.PI / 5, 0, 0]}
     />
-    {/* subtle point light for atmospheric tone */}
-    <pointLight position={[0, 1, 0]} intensity={10} color="#7209b7" />
-    <pointLight position={[1, 2, -2]} intensity={10} color="#0d00a4" />
+
+    {/* back light để không bị flat */}
+    <pointLight position={[-2, 3, -3]} intensity={40} color="#7209b7" />
+    <pointLight position={[2, 2, -2]} intensity={30} color="#0d00a4" />
   </>
 );
 
