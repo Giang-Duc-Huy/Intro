@@ -38,7 +38,7 @@ const expCards = [
     imgPath: `${import.meta.env.BASE_URL}images/logos/ueh.png`,
     logoPath: `${import.meta.env.BASE_URL}images/logo1.png`,
     title: "University of Economics Ho Chi Minh City (UEH)",
-    date: "2022 - Present",
+    date: "2023 - Present",
     responsibilities: [
       "Maintaining a GPA of 4.9/5.0 — Top of the faculty ranking.",
       "Pursuing a Bachelor's degree in Software Engineering.",
@@ -63,7 +63,7 @@ const testimonials = [
   {
     name: "Wade Warren",
     mentions: "@wadewarren",
-    review: "Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
+    review: "Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched.",
     imgPath: `${import.meta.env.BASE_URL}images/client3.png`,
   },
   {
@@ -71,24 +71,6 @@ const testimonials = [
     mentions: "@guyhawkins",
     review: "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project.",
     imgPath: `${import.meta.env.BASE_URL}images/client2.png`,
-  },
-  {
-    name: "Marvin McKinney",
-    mentions: "@marvinmckinney",
-    review: "Adrian was a pleasure to work with. He turned our outdated website into a fresh, intuitive platform that's both modern and easy to navigate. Fantastic work overall.",
-    imgPath: `${import.meta.env.BASE_URL}images/client5.png`,
-  },
-  {
-    name: "Floyd Miles",
-    mentions: "@floydmiles",
-    review: "Adrian's expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch.",
-    imgPath: `${import.meta.env.BASE_URL}images/client4.png`,
-  },
-  {
-    name: "Albert Flores",
-    mentions: "@albertflores",
-    review: "Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend and backend dev are top-notch.",
-    imgPath: `${import.meta.env.BASE_URL}images/client6.png`,
   },
 ];
 

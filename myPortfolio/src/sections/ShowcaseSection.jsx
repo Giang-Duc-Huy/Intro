@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import TitleHeader from "../components/TitleHeader";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -46,8 +47,10 @@ const AppShowcase = () => {
   return (
     <div id="work" ref={sectionRef} className="app-showcase">
       <div className="w-full">
-        <h1 className="text-4xl text-white font-bold text-center mb-12">My Projects</h1>
-        <div className="showcaselayout">
+        <TitleHeader
+          title="My Projects"
+        />
+        <div className="showcaselayout mt-20">
           <div ref={rydeRef} className="first-project-wrapper">
             <a href="https://www.figma.com/design/f3mczrO7L5BTj5rsgsmLuT/Hotelix?node-id=0-1&t=vJkneAbNhH0NxiE8-1" target="_blank" rel="noopener noreferrer">
               <div className="image-wrapper ">
