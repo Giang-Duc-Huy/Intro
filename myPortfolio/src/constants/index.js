@@ -40,7 +40,7 @@ const expCards = [
     title: "University of Economics Ho Chi Minh City (UEH)",
     date: "2023 - Present",
     responsibilities: [
-      "Maintaining a GPA of 4.9/5.0 — Top of the faculty ranking.",
+      "Maintaining a GPA of 3.49/4.0.",
       "Pursuing a Bachelor's degree in Software Engineering.",
       "Actively building real-world projects alongside academic studies to bridge theory and practice.",
     ],
@@ -75,10 +75,11 @@ const testimonials = [
 ];
 
 const socialImgs = [
-  { name: "insta",    imgPath: `${import.meta.env.BASE_URL}images/insta.png` },
-  { name: "fb",       imgPath: `${import.meta.env.BASE_URL}images/fb.png` },
-  { name: "x",        imgPath: `${import.meta.env.BASE_URL}images/x.png` },
-  { name: "linkedin", imgPath: `${import.meta.env.BASE_URL}images/linkedin.png` },
+  { name: "instagram", imgPath: `${import.meta.env.BASE_URL}images/instagram.png`, imglink: "https://www.instagram.com/adrienn_/" },
+  { name: "facebook", imgPath: `${import.meta.env.BASE_URL}images/facebook.png`, imglink: "https://www.facebook.com/adrienn/" },
+  { name: "github", imgPath: `${import.meta.env.BASE_URL}images/github.png`, imglink: "https://github.com/adrienn" },
+  { name: "linkedin", imgPath: `${import.meta.env.BASE_URL}images/linkedin.png`, imglink: "https://www.linkedin.com/in/adrienn/" },
+  { name: "figma", imgPath: `${import.meta.env.BASE_URL}images/figma.png`, imglink: "https://www.figma.com/@adrienn" },
 ];
 
 export {

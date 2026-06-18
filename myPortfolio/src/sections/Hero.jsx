@@ -1,19 +1,7 @@
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-
 import Button from "../components/Button";
-import { words } from "../constants";
 import HeroExperience from "../components/models/hero_models/HeroExperience";
 
 const Hero = () => {
-  useGSAP(() => {
-    gsap.fromTo(
-      ".hero-text h1",
-      { y: 50, opacity: 0 },
-      { y: 0, opacity: 1, stagger: 0.2, duration: 1, ease: "power2.inOut" }
-    );
-  });
-
   return (
     <section id="hero" className="relative overflow-hidden">
       <div className="hero-layout">
@@ -23,23 +11,6 @@ const Hero = () => {
             <div className="hero-text">
               <h1 className="text-[#3D83F5] text-8xl">
                 <b>Giang</b>
-                {/* <span className="slide">
-                  <span className="wrapper">
-                    {words.map((word, index) => (
-                      <span
-                        key={index}
-                        className="flex items-center md:gap-3 gap-1 pb-2"
-                      >
-                        <img
-                          src={word.imgPath}
-                          alt="person"
-                          className="xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-white-50"
-                        />
-                        <span>{word.text}</span>
-                      </span>
-                    ))}
-                  </span>
-                </span> */}
               </h1>
               <h1 className="text-8xl"><b>Duc Huy</b> </h1>
             </div>
@@ -51,7 +22,6 @@ const Hero = () => {
             <Button
               text="View My Work"
               className="md:w-80 md:h-16 w-60 h-12"
-              id="counter"
             />
           </div>
         </header>
