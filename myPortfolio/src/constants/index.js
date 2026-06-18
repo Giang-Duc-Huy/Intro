@@ -55,31 +55,31 @@ const expLogos = [
 
 const testimonials = [
   {
-    name: "Esther Howard",
-    mentions: "@estherhoward",
-    review: "I can't say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
+    name: "Le Nam",
+    mentions: "@lenam",
+    review: "Huy is reliable and easy to work with. He understands requirements quickly and gets things done without needing much back and forth",
     imgPath: `${import.meta.env.BASE_URL}images/client1.png`,
   },
   {
-    name: "Wade Warren",
-    mentions: "@wadewarren",
-    review: "Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched.",
+    name: "Hoang Giang",
+    mentions: "@hoanggiang",
+    review: "Good communicator and takes feedback well. Our project ran smoothly largely because Huy stayed consistent and kept things on track.",
     imgPath: `${import.meta.env.BASE_URL}images/client3.png`,
   },
   {
-    name: "Guy Hawkins",
-    mentions: "@guyhawkins",
-    review: "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project.",
+    name: "Mai Nguyen",
+    mentions: "@mainguyen",
+    review: "Has an ability to turn ideas into real, functional products. From UI design to implementation, he handles everything with care.",
     imgPath: `${import.meta.env.BASE_URL}images/client2.png`,
   },
 ];
 
 const socialImgs = [
-  { name: "instagram", imgPath: `${import.meta.env.BASE_URL}images/logos/instagram.png`, imglink: "https://www.instagram.com/adrienn_/" },
-  { name: "facebook", imgPath: `${import.meta.env.BASE_URL}images/logos/facebook.png`, imglink: "https://www.facebook.com/adrienn/" },
-  { name: "github", imgPath: `${import.meta.env.BASE_URL}images/logos/github.png`, imglink: "https://github.com/adrienn" },
-  { name: "linkedin", imgPath: `${import.meta.env.BASE_URL}images/logos/linkedin.png`, imglink: "https://www.linkedin.com/in/adrienn/" },
-  { name: "figma", imgPath: `${import.meta.env.BASE_URL}images/logos/figma.png`, imglink: "https://www.figma.com/@adrienn" },
+  { name: "instagram", imgPath: `${import.meta.env.BASE_URL}images/logos/instagram.png`, imglink: "https://www.instagram.com/cancel.giang/" },
+  { name: "facebook", imgPath: `${import.meta.env.BASE_URL}images/logos/facebook.png`, imglink: "https://www.facebook.com/cancel.giang/" },
+  { name: "github", imgPath: `${import.meta.env.BASE_URL}images/logos/github.png`, imglink: "https://github.com/Giang-Duc-Huy" },
+  { name: "linkedin", imgPath: `${import.meta.env.BASE_URL}images/logos/linkedin.png`, imglink: "https://www.linkedin.com/in/hijang17" },
+  { name: "figma", imgPath: `${import.meta.env.BASE_URL}images/logos/figma.png`, imglink: "https://www.figma.com/@hijang17" },
 ];
 
 export {
