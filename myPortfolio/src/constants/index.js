@@ -1,6 +1,6 @@
 const navLinks = [
   { name: "Work", link: "#work" },
-  { name: "About", link: "#experience" },
+  { name: "About", link: "#about" },
   { name: "Skills", link: "#skills" },
   { name: "Testimonials", link: "#testimonials" },
 ];
@@ -19,16 +19,16 @@ const words = [
 // Tech stack dùng cho slider trong TechStack.jsx
 const techStackImgs = [
   { name: "React",      imgPath: `${import.meta.env.BASE_URL}images/logos/react.png` },
-  { name: "TypeScript", imgPath: `${import.meta.env.BASE_URL}images/logos/typescript.png` },
+  { name: "TypeScript", imgPath: `${import.meta.env.BASE_URL}images/logos/ts.png` },
   { name: "Node.js",    imgPath: `${import.meta.env.BASE_URL}images/logos/node.png` },
   { name: "Python",     imgPath: `${import.meta.env.BASE_URL}images/logos/python.svg` },
-  { name: "PostgreSQL", imgPath: `${import.meta.env.BASE_URL}images/logos/postgresql.png` },
+  { name: "PostgreSQL", imgPath: `${import.meta.env.BASE_URL}images/logos/postgre.png` },
   { name: "Figma",      imgPath: `${import.meta.env.BASE_URL}images/logos/figma.png` },
   { name: "Git",        imgPath: `${import.meta.env.BASE_URL}images/logos/git.svg` },
   { name: "REST API",   imgPath: `${import.meta.env.BASE_URL}images/logos/restapi.png` },
   { name: "Blender",    imgPath: `${import.meta.env.BASE_URL}images/logos/blender.png` },
-  { name: "MongoDB",    imgPath: `${import.meta.env.BASE_URL}images/logos/mongodb.png` },
-  { name: "Socket.io",  imgPath: `${import.meta.env.BASE_URL}images/logos/socketio.png` },
+  { name: "MongoDB",    imgPath: `${import.meta.env.BASE_URL}images/logos/mongo.png` },
+  { name: "Socket.io",  imgPath: `${import.meta.env.BASE_URL}images/logos/socket.png` },
   { name: "Tailwind",   imgPath: `${import.meta.env.BASE_URL}images/logos/tailwind.png` },
 ];
 
@@ -75,11 +75,11 @@ const testimonials = [
 ];
 
 const socialImgs = [
-  { name: "instagram", imgPath: `${import.meta.env.BASE_URL}images/instagram.png`, imglink: "https://www.instagram.com/adrienn_/" },
-  { name: "facebook", imgPath: `${import.meta.env.BASE_URL}images/facebook.png`, imglink: "https://www.facebook.com/adrienn/" },
-  { name: "github", imgPath: `${import.meta.env.BASE_URL}images/github.png`, imglink: "https://github.com/adrienn" },
-  { name: "linkedin", imgPath: `${import.meta.env.BASE_URL}images/linkedin.png`, imglink: "https://www.linkedin.com/in/adrienn/" },
-  { name: "figma", imgPath: `${import.meta.env.BASE_URL}images/figma.png`, imglink: "https://www.figma.com/@adrienn" },
+  { name: "instagram", imgPath: `${import.meta.env.BASE_URL}images/logos/instagram.png`, imglink: "https://www.instagram.com/adrienn_/" },
+  { name: "facebook", imgPath: `${import.meta.env.BASE_URL}images/logos/facebook.png`, imglink: "https://www.facebook.com/adrienn/" },
+  { name: "github", imgPath: `${import.meta.env.BASE_URL}images/logos/github.png`, imglink: "https://github.com/adrienn" },
+  { name: "linkedin", imgPath: `${import.meta.env.BASE_URL}images/logos/linkedin.png`, imglink: "https://www.linkedin.com/in/adrienn/" },
+  { name: "figma", imgPath: `${import.meta.env.BASE_URL}images/logos/figma.png`, imglink: "https://www.figma.com/@adrienn" },
 ];
 
 export {

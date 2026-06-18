@@ -30,9 +30,6 @@ const Button = ({ text, className, id }) => {
       <div className="cta-button group">
         <div className="bg-circle" />
         <p className="text">{text}</p>
-        <div className="arrow-wrapper">
-          <img src={`${import.meta.env.BASE_URL}images/arrow-down.svg`} alt="arrow" />
-        </div>
       </div>
     </a>
   );

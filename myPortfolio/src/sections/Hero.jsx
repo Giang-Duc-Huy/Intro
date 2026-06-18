@@ -1,7 +1,17 @@
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import Button from "../components/Button";
 import HeroExperience from "../components/models/hero_models/HeroExperience";
 
 const Hero = () => {
+  // useGSAP(() => {
+  //   gsap.fromTo(
+  //     ".hero-text h1",
+  //     { y: 50, opacity: 0 },
+  //     { y: 0, opacity: 1, stagger: 0.2, duration: 1, ease: "power2.inOut" }
+  //   );
+  // });
+
   return (
     <section id="hero" className="relative overflow-hidden">
       <div className="hero-layout">
@@ -22,6 +32,7 @@ const Hero = () => {
             <Button
               text="View My Work"
               className="md:w-80 md:h-16 w-60 h-12"
+              id="counter"
             />
           </div>
         </header>
@@ -29,7 +40,7 @@ const Hero = () => {
         {/* RIGHT: 3D Model or Visual */}
         <figure>
           <div className="hero-3d-layout">
-            <HeroExperience />
+            {/* <HeroExperience /> */}
           </div>
         </figure>
       </div>

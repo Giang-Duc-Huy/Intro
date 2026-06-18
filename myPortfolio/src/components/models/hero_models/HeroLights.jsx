@@ -1,52 +1,58 @@
-import * as THREE from "three";
+import React, { useMemo } from "react";
 
-const HeroLights = () => (
-  <>
-    {/* ambient tổng thể — tăng mạnh để sáng base */}
-    <ambientLight intensity={1.2} color="#c8b8ff" />
+const HeroLights = () => {
+  const rectAreaArgs = useMemo(() => ["#a259ff", 8, 5, 4], []);
 
-    {/* đèn chính từ trên — trắng mạnh */}
-    <spotLight
-      position={[2, 8, 6]}
-      angle={0.25}
-      penumbra={0.3}
-      intensity={200}
-      color="#ffffff"
-      castShadow
-    />
+  return (
+    <>
+      {/* Ambient sáng hơn — đây là fix chính cho body tối */}
+      <ambientLight intensity={4} color="#c8b8ff" />
 
-    {/* fill xanh cyan từ bên trái */}
-    <spotLight
-      position={[-5, 6, 5]}
-      angle={0.4}
-      penumbra={0.6}
-      intensity={20}
-      color="#00d4ff"
-    />
+      {/* Đèn chính từ trên — tăng intensity */}
+      <spotLight
+        position={[2, 8, 6]}
+        angle={0.35}
+        penumbra={0.4}
+        intensity={10}
+        color="#ffffff"
+      />
 
-    {/* fill tím từ phải */}
-    <spotLight
-      position={[5, 5, 3]}
-      angle={0.35}
-      penumbra={0.7}
-      intensity={50}
-      color="#bf00ff"
-    />
+      {/* Fill cyan từ trái — mạnh hơn để sáng phần tối bên trái */}
+      <spotLight
+        position={[-6, 5, 6]}
+        angle={0.5}
+        penumbra={0.7}
+        intensity={1}
+        color="#00d4ff"
+      />
 
-    {/* đèn từ dưới lên — cyberpunk rim */}
-    <pointLight position={[0, -1, 3]} intensity={10} color="#00ffff" />
+      {/* Fill tím từ phải */}
+      <spotLight
+        position={[6, 4, 4]}
+        angle={0.45}
+        penumbra={0.7}
+        intensity={1}
+        color="#bf00ff"
+      />
 
-    {/* RectAreaLight cho soft fill */}
-    <primitive
-      object={new THREE.RectAreaLight("#a259ff", 15, 4, 3)}
-      position={[0, 4, 5]}
-      rotation={[-Math.PI / 5, 0, 0]}
-    />
+      {/* Đèn từ phía trước thấp — fill phần dưới model */}
+      <pointLight position={[0, 0, 8]} intensity={3} color="#8080ff" />
 
-    {/* back light để không bị flat */}
-    <pointLight position={[-2, 3, -3]} intensity={40} color="#7209b7" />
-    <pointLight position={[2, 2, -2]} intensity={30} color="#0d00a4" />
-  </>
-);
+      {/* Rim từ dưới lên */}
+      <pointLight position={[0, -1, 3]} intensity={8} color="#00ffff" />
 
-export default HeroLights;
+      {/* RectAreaLight soft fill */}
+      <rectAreaLight
+        args={rectAreaArgs}
+        position={[0, 5, 6]}
+        rotation={[-Math.PI / 5, 0, 0]}
+      />
+
+      {/* Back lights */}
+      <pointLight position={[-2, 3, -3]} intensity={0.9} color="#7209b7" />
+      <pointLight position={[2, 2, -2]} intensity={0.7} color="#0d00a4" />
+    </>
+  );
+};
+
+export default React.memo(HeroLights);

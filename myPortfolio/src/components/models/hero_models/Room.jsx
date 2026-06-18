@@ -11,6 +11,7 @@ import { BlendFunction } from "postprocessing";
 import * as THREE from "three";
 
 export function Room(props) {
+  const { bloom = true } = props;
   const { nodes, materials } = useGLTF(
     `${import.meta.env.BASE_URL}models/Cyber.glb`
   );
@@ -65,15 +66,17 @@ export function Room(props) {
 
   return (
     <group {...props} dispose={null}>
-      <EffectComposer>
-        <SelectiveBloom
-          selection={[glassRef, lightBlueRef, lightOrangeRef]}
-          intensity={1.8}
-          luminanceThreshold={0.1}
-          luminanceSmoothing={0.9}
-          blendFunction={BlendFunction.ADD}
-        />
-      </EffectComposer>
+      {bloom && (
+        <EffectComposer>
+          <SelectiveBloom
+            selection={[glassRef, lightBlueRef, lightOrangeRef]}
+            intensity={0.9}
+            luminanceThreshold={0.3}
+            luminanceSmoothing={0.5}
+            blendFunction={BlendFunction.ADD}
+          />
+        </EffectComposer>
+      )}
 
       <group position={[1.128, 2.035, 1.83]} scale={[2.877, 0.194, 2.877]}>
         <mesh

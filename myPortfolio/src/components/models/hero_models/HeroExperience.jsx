@@ -10,8 +10,14 @@ const HeroExperience = () => {
   const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
 
   return (
-    <Canvas camera={{ position: [0, 0, 15], fov: 45 }}>
-      <ambientLight intensity={0.2} color="#1a1a40" />
+    <Canvas
+      camera={{ position: [0, 0, 15], fov: 45 }}
+      frameloop="demand"
+      dpr={[1, 1.5]}
+      shadows={false}
+      gl={{ antialias: false, powerPreference: "high-performance" }}
+    >
+      <ambientLight intensity={1} color="#1a1a40" />
 
       {/*
         autoRotate       — tự xoay liên tục
@@ -26,7 +32,7 @@ const HeroExperience = () => {
         minPolarAngle={Math.PI / 5}
         maxPolarAngle={Math.PI / 2}
         autoRotate={true}
-        autoRotateSpeed={1.5}
+        autoRotateSpeed={2.5}
       />
 
       <Suspense fallback={null}>
@@ -36,7 +42,7 @@ const HeroExperience = () => {
           position={[0, -3.5, 0]}
           rotation={[0, -Math.PI / 4, 0]}
         >
-          <Room />
+          <Room bloom={!isMobile} />
         </group>
       </Suspense>
     </Canvas>

@@ -3,18 +3,20 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import { expCards } from "../constants";
 import GlowCard from "../components/GlowCard";
+import TitleHeader from "../components/TitleHeader";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Experience = () => {
   return (
     <section
-      id="experience"
       className="flex-center md:mt-40 mt-20 section-padding xl:px-0"
     >
-      <div className="w-full h-full md:px-20 px-5">
-        <h1 className="text-4xl text-white font-bold text-center mb-12">About me</h1>
-        <div className="mt-32 relative">
+      <div  id="about" className="w-full h-full md:px-20 px-5">
+        <TitleHeader 
+          title="About Me"
+        />
+        <div className="mt-20 relative">
           <div className="relative z-50 xl:space-y-32 space-y-10">
             {expCards.map((card) => (
               <div key={card.title} className="exp-card-wrapper">

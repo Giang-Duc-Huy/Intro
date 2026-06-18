@@ -14,22 +14,24 @@ const Contact = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    try {
-      await emailjs.sendForm(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-        formRef.current,
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-      );
-      setForm({ name: "", email: "", message: "" });
-    } catch (error) {
-      console.error("EmailJS Error:", error);
-    } finally {
-      setLoading(false);
-    }
-  };
+  e.preventDefault();
+  setLoading(true);
+  try {
+    await emailjs.sendForm(
+      import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+      formRef.current,
+      import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+    );
+    setForm({ name: "", email: "", message: "" });
+    alert("Success! Thank you for reaching out. I will get back to you as soon as possible.");      
+  } catch (error) {
+    console.error("EmailJS Error:", error);
+    alert("Failed to send, please try again!"); 
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <section id="contact" className="flex-center section-padding">
