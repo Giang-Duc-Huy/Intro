@@ -43,7 +43,7 @@ const Contact = () => {
           <div className="contact-left">
             <div className="contact-illustration">
               <img
-                src={`${import.meta.env.BASE_URL}images/contact-illustration.png`}
+                src={`${import.meta.env.BASE_URL}images/city.png`}
                 alt="contact illustration"
               />
             </div>

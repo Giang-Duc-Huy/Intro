@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Experience = () => {
   return (
     <section
-      className="flex-center md:mt-40 mt-20 section-padding xl:px-0"
+      className="flex-center md:mt-15 mt-5 section-padding xl:px-0"
     >
       <div  id="about" className="w-full h-full md:px-20 px-5">
         <TitleHeader 
