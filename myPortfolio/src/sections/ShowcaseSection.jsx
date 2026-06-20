@@ -47,7 +47,7 @@ const AppShowcase = () => {
   return (
     <section id="counter">
       <div id="work" ref={sectionRef} className="app-showcase">
-        <div className="w-full md:mt-40 mt-20">
+        <div className="w-full md:mt-20 mt-10">
           <TitleHeader
             title="My Projects"
           />
@@ -69,7 +69,7 @@ const AppShowcase = () => {
             </div>
 
             <div className="project-list-wrapper overflow-hidden">
-              <a href="https://github.com/PeanLutHuynh/Project_Blockify" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/Giang-Duc-Huy/Chatchat" target="_blank" rel="noopener noreferrer">
                   <div className="project" ref={libraryRef}>
                     <div className="image-wrapper bg-[#050F1D] border border-[#3D83F5]" >
                       <img
@@ -82,7 +82,7 @@ const AppShowcase = () => {
                   </div>
                 </a>
 
-                <a href="https://github.com/Giang-Duc-Huy/Chatchat" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/PeanLutHuynh/Project_Blockify" target="_blank" rel="noopener noreferrer">
                   <div className="project" ref={ycDirectoryRef}>
                     <div className="image-wrapper bg-[#010102] border border-[#3D83F5]">
                       <img src={`${import.meta.env.BASE_URL}images/project3.png`} 

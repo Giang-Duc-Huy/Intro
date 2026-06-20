@@ -2,7 +2,7 @@ const navLinks = [
   { name: "About", link: "#about" },
   { name: "Work", link: "#work" },
   { name: "Skills", link: "#skills" },
-  { name: "Testimonials", link: "#testimonials" },
+  { name: "Contact", link: "#contact" },
 ];
 
 const words = [
@@ -47,12 +47,6 @@ const expCards = [
   },
 ];
 
-const expLogos = [
-  { name: "logo1", imgPath: `${import.meta.env.BASE_URL}images/logo1.png` },
-  { name: "logo2", imgPath: `${import.meta.env.BASE_URL}images/logo2.png` },
-  { name: "logo3", imgPath: `${import.meta.env.BASE_URL}images/logo3.png` },
-];
-
 const testimonials = [
   {
     name: "Le Nam",
@@ -85,7 +79,6 @@ const socialImgs = [
 export {
   words,
   expCards,
-  expLogos,
   testimonials,
   socialImgs,
   techStackImgs,
