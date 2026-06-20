@@ -34,7 +34,7 @@ const techStackImgs = [
 
 const expCards = [
   {
-    review: "A UEH student obsessed with building things that actually work, not just look good.",
+    review: "Established in 1976, University of Economics Ho Chi Minh City (UEH) is a leading multidisciplinary university in Vietnam, renowned for excellence in business, economics, technology, and sustainable development.",
     imgPath: `${import.meta.env.BASE_URL}images/logos/ueh.png`,
     logoPath: `${import.meta.env.BASE_URL}images/logo1.png`,
     title: "University of Economics Ho Chi Minh City (UEH)",
@@ -51,13 +51,13 @@ const testimonials = [
   {
     name: "Le Nam",
     mentions: "@lenam",
-    review: "Huy is reliable and easy to work with. He understands requirements quickly and gets things done without needing much back and forth",
+    review: "Reliable and easy to work with, he understands requirements quickly and gets things done without needing much back and forth",
     imgPath: `${import.meta.env.BASE_URL}images/client1.png`,
   },
   {
     name: "Hoang Giang",
     mentions: "@hoanggiang",
-    review: "Good communicator and takes feedback well. Our project ran smoothly largely because Huy stayed consistent and kept things on track.",
+    review: "Good communicator and takes feedback well. Our project ran smoothly largely because he stayed consistent and kept things on track.",
     imgPath: `${import.meta.env.BASE_URL}images/client3.png`,
   },
   {
